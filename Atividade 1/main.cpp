@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <limits> // estudar isso
 #include "aluno.h"
 
 int main(void)
@@ -11,16 +12,18 @@ int main(void)
 
     do
     {
-        ler_aluno(y[i]);
-        std::cout << "Deseja continuar registrando alunos? (S/N)\n";
-        std::cin >> escolha >> std::ws;
-
-        if(i == tam)
+         if(i == tam)
         {
             std::cout << "O |if| foi acionado\n";
             tam += 2;
             y = (aluno*)realloc(y, tam * sizeof(aluno));
         }
+
+        ler_aluno(y[i]);
+        std::cout << "Deseja continuar registrando alunos? (S/N)\n";
+        std::cin >> escolha;
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // estudar isso
+
         i++;
     }while(escolha == 'S' || escolha == 's');
     
