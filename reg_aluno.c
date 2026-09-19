@@ -22,7 +22,7 @@ int main(void)
 
     for(int i = 0; i < tam; i++)
     {
-        printf("Defini student %d name\n", i + 1);
+        printf("Define student %d name\n", i + 1);
             fgets(blood[i].name, 100, stdin);
     }
     for(int i = 0; i < tam; i++)
