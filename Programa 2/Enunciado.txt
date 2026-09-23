@@ -1,0 +1,8 @@
+1. Registro de um ensaio laboratorial
+Desenvolva um programa em C++ que leia o nome completo de um componente químico, o código
+do ensaio, a quantidade de medições realizadas, a temperatura inicial em graus Celsius e a
+variação média de temperatura por medição em graus Celsius. O nome completo deve ser lido
+como uma linha inteira. Considere a constante de segurança de 85,0 °C e calcule a temperatura
+final pela fórmula temperatura final = temperatura inicial + quantidade de medições × variação
+média. Informe o nome, o código, a quantidade de medições, a temperatura final, a quantidade de
+caracteres do nome e se a temperatura final está dentro do limite ou o ultrapassou.
