@@ -7,5 +7,7 @@ int main(void)
 
     def_E(z);
 
+    z.imprime();
+
 return 0;
 }

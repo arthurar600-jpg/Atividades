@@ -1,8 +1,6 @@
-#include <iostream>
-#include <string>
 #include "quimica.h"
 
-void def_E(elemento x)
+void def_E(elemento& x)
     {
         std::string str;
         int a;
@@ -10,7 +8,7 @@ void def_E(elemento x)
         bool b;
 
         std::cout << "Nome: ";
-        std::getline(std::cin >> std::ws, str);
+        std::getline(std::cin, str);
             x.D_nome(str);
         std::cout << "Código: ";
         std::getline(std::cin >> std::ws, str);
@@ -24,4 +22,8 @@ void def_E(elemento x)
         std::cout << "Variação da temperatura: ";
         std::cin >> f;
             x.D_tempD(f);
+
+        x.calT();
+        x.carac();
+        x.medirT();
     }
