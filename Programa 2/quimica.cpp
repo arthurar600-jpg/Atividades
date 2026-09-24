@@ -2,16 +2,26 @@
 #include <string>
 #include "quimica.h"
 
-void imprime(elemento x)
-{
-    std::cout << "Nome: " x.nome << "\nCódigo: " << x.cod << "\nNº de Medições: ";
-    std::cout << x.quant << "\nTemperatura F: " << x.tempF << "\n Nº de caracteres do código: ";
-    std::cout << x.q_char;
-    if(x.b)
+void def_E(elemento x)
     {
-        std::cout << "Temperatura exedeu o limite.";
-    } else
-    {
-        std::cout << "Temperatura está dentro do limite.";
+        std::string str;
+        int a;
+        double f;
+        bool b;
+
+        std::cout << "Nome: ";
+        std::getline(std::cin >> std::ws, str);
+            x.D_nome(str);
+        std::cout << "Código: ";
+        std::getline(std::cin >> std::ws, str);
+            x.D_cod(str);
+        std::cout << "Quantida de medições: ";
+        std::cin >> a;
+            x.D_quant(a);
+        std::cout << "Temperatura inicial: ";
+        std::cin >> f;
+            x.D_temp0(f);
+        std::cout << "Variação da temperatura: ";
+        std::cin >> f;
+            x.D_tempD(f);
     }
-}
