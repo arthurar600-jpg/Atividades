@@ -7,9 +7,10 @@ typedef struct Funcionario
 {
     char nome[50];
     int inscricao, horasN, horasE, classe;
-    float salarioN, salarioE, salarioL;
+    float salarioN, salarioE, salarioL, descontoINSS;
 }funcionario;
 
 void calculaSalario(funcionario* x);
+void getFuncionario(funcionario* x);
 void imprime(funcionario x);
 #endif
