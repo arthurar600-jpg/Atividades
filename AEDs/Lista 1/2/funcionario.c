@@ -35,7 +35,7 @@ void imprime(funcionario x)
     printf("Nome: ");
     puts(x.nome);
     printf("N° de inscrição: %d \nSalario Horas: %.2f\n", x.inscricao, x.salarioN);
-    printf("Horas extra: %.2f\n Dedução INSS: %.2f\nSalario Liquido: %.2f\n", x.salarioE, x.descontoINSS, x.salarioL);
+    printf("Horas extra: %.2f\nDedução INSS: %.2f\nSalario Liquido: %.2f\n", x.salarioE, x.descontoINSS, x.salarioL);
 }
 
 void getFuncionario(funcionario* x)
@@ -50,6 +50,6 @@ void getFuncionario(funcionario* x)
         scanf("%d", &((*x).horasN));
     printf("Digite o nº de horas extras do funcionário.\n");
         scanf("%d", &((*x).horasE));
-    printf("Digite o sálario por hora do funcionário e a sua clase. (XX.XX, 1/2)");
+    printf("Digite o sálario por hora do funcionário e a sua clase. (XX.XX, 1/2)\n");
         scanf("%f,%d", &((*x).salarioN), &((*x).classe));
 }
